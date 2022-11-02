@@ -1,3 +1,6 @@
+import 'package:dwfifa/app/core/styles/button_styles.dart';
+import 'package:dwfifa/app/core/styles/colors_app.dart';
+import 'package:dwfifa/app/core/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatelessWidget {
@@ -5,26 +8,26 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Theme(
-      data: ThemeData(
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.white,
-          elevation: 0,
-          titleTextStyle: TextStyle(
-            color: Colors.black,
-          ),
-          centerTitle: true,
-          iconTheme: IconThemeData(
-            color: Colors.black,
-          ),
-        ),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Splash Page'),
       ),
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text(''),
-        ),
-        body: Container(),
-      ),
+      body: Center(
+          child: Column(
+        children: [
+          ElevatedButton(
+            style: ButtonStyles.instanceButton.primaryButton,
+            onPressed: () {},
+            child: Text("Salvar"),
+          ),
+          OutlinedButton(
+            style: ButtonStyles.instanceButton.primaryOutlineButton,
+            onPressed: () {},
+            child: Text("Salvar"),
+          ),
+          TextField()
+        ],
+      )),
     );
   }
 }
