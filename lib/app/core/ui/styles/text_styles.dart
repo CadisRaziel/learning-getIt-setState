@@ -43,6 +43,10 @@ class TextStyles {
   TextStyle get labelTextField => textSecondaryFontRegular.copyWith(
         color: ColorsApp.instanceColor.greyDark,
       );
+  TextStyle get titleWhite => textPrimaryFontBold.copyWith(
+        fontSize: 22,
+        color: Colors.white,
+      );
 }
 
 //extension criada para chamarmos essa classe mais facilmente ja que não pode ser instanciada !
