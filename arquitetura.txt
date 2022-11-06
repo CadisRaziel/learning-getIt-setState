@@ -1,1 +1,4 @@
 A Arquitetura do projeto é MVP
+
+(Nosso presenter precisa ter um contrato "interface")
+criamos as pastas dentro de 'core'

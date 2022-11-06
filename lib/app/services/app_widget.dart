@@ -1,4 +1,6 @@
 import 'package:dwfifa/app/core/theme/theme_config.dart';
+import 'package:dwfifa/app/pages/auth/login/login_page.dart';
+import 'package:dwfifa/app/pages/home/home_page.dart';
 import 'package:dwfifa/app/pages/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +15,8 @@ class AppWidget extends StatelessWidget {
       theme: ThemeConfig.theme,
       routes: {
         '/': (_) => const SplashPage(),
+        '/auth/login': (_) => const LoginPage(),
+        '/home': (_) => const HomePage(),
       },
     );
   }
