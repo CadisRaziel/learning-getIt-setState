@@ -1,7 +1,7 @@
 import 'package:dwfifa/app/core/theme/theme_config.dart';
 import 'package:dwfifa/app/pages/auth/login/login_page.dart';
 import 'package:dwfifa/app/pages/home/home_page.dart';
-import 'package:dwfifa/app/pages/splash/splash_page.dart';
+import 'package:dwfifa/app/pages/splash/splash_router.dart';
 import 'package:flutter/material.dart';
 
 class AppWidget extends StatelessWidget {
@@ -14,7 +14,7 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeConfig.theme,
       routes: {
-        '/': (_) => const SplashPage(),
+        '/': (_) => const SplashRouter(),
         '/auth/login': (_) => const LoginPage(),
         '/home': (_) => const HomePage(),
       },
