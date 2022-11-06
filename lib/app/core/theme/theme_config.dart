@@ -1,5 +1,5 @@
-import 'package:dwfifa/app/core/styles/colors_app.dart';
-import 'package:dwfifa/app/core/styles/text_styles.dart';
+import 'package:dwfifa/app/core/ui/styles/colors_app.dart';
+import 'package:dwfifa/app/core/ui/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class ThemeConfig {

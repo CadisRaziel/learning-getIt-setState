@@ -1,5 +1,5 @@
 //criando uma classe singleton(estanciada apenas uma vez)
-import 'package:dwfifa/app/core/styles/colors_app.dart';
+import 'package:dwfifa/app/core/ui/styles/colors_app.dart';
 import 'package:flutter/material.dart';
 
 class TextStyles {
@@ -36,6 +36,9 @@ class TextStyles {
       TextStyle(fontWeight: FontWeight.bold, fontFamily: secundaryFont);
   TextStyle get textSecondaryFontExtraBold =>
       TextStyle(fontWeight: FontWeight.w800, fontFamily: secundaryFont);
+  TextStyle get textPrimaryFontExtraBoldPrimaryColor =>
+      textSecondaryFontExtraBold.copyWith(
+          color: ColorsApp.instanceColor.primary);
 
   TextStyle get labelTextField => textSecondaryFontRegular.copyWith(
         color: ColorsApp.instanceColor.greyDark,
