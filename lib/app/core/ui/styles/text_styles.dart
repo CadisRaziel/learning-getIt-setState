@@ -47,6 +47,10 @@ class TextStyles {
         fontSize: 22,
         color: Colors.white,
       );
+  TextStyle get titleBlack => textPrimaryFontBold.copyWith(
+        fontSize: 22,
+        color: Colors.black,
+      );
 }
 
 //extension criada para chamarmos essa classe mais facilmente ja que não pode ser instanciada !
