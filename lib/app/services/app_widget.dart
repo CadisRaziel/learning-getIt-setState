@@ -3,6 +3,8 @@ import 'package:dwfifa/app/core/theme/theme_config.dart';
 import 'package:dwfifa/app/pages/auth/login/login_page.dart';
 import 'package:dwfifa/app/pages/home/home_page.dart';
 import 'package:dwfifa/app/pages/splash/splash_router.dart';
+import 'package:dwfifa/app/repository/auth/auth_repository.dart';
+import 'package:dwfifa/app/repository/auth/auth_repository_impl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
 
@@ -15,7 +17,9 @@ class AppWidget extends StatelessWidget {
     return FlutterGetItApplicationBinding(
       bindingsBuilder: () => [
         //fica disponivel para toda a aplicação
-        Bind.lazySingleton((i) => CustomDio())
+        Bind.lazySingleton<CustomDio>((i) => CustomDio()),
+        //i() -> calleble class
+        Bind.lazySingleton<AuthRepository>((i) => AuthRepositoryImpl(dio: i())),
       ],
       child: MaterialApp(
         title: 'Fifa World Cup Album',
