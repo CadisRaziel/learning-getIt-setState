@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
 class RegisterUserModel {
@@ -36,4 +37,9 @@ class RegisterUserModel {
 
   factory RegisterUserModel.fromJson(String source) =>
       RegisterUserModel.fromMap(json.decode(source));
+
+  @override
+  String toString() {
+    return 'RegisterUserModel(name: $name, email: $email, password: $password, passwordConfirmation: $passwordConfirmation)';
+  }
 }
